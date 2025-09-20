@@ -29,12 +29,12 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-primary py-20">
+    <section id="projects" className="py-20 bg-secondary">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-8">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-secondary rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+            <div key={index} className="bg-primary rounded-lg shadow-lg overflow-hidden">
               <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
@@ -45,8 +45,8 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="flex justify-center space-x-4">
-                  <a href={project.liveDemo} className="text-white hover:text-accent font-bold">Live Demo</a>
-                  <a href={project.sourceCode} className="text-white hover:text-accent font-bold">Source Code</a>
+                  <a href={project.liveDemo} className="text-white hover:text-gray-400 font-bold">Live Demo</a>
+                  <a href={project.sourceCode} className="text-white hover:text-gray-400 font-bold">Source Code</a>
                 </div>
               </div>
             </div>
